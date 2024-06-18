@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React, {useEffect, useState} from 'react'
+import './App.css'
+import GetGifs from './components/GetGifs'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
-export default App;
+  export default function App() {
+  
+  const [gifs, setGifs] = useState([])
+  
+  useEffect(function() {
+     GetGifs().then(gifs => setGifs(gifs))
+      }, []) 
+      
+    
+      return(  
+        <div className="App-content">
+        <div className="header">
+          <Header/>
+        </div>  
+        <h1 className="title">
+            Del 19 al 28 de Julio en Buenos Aires 
+        </h1>
+            <section className="gifs">
+              {gifs.map(singleGif => <img src={singleGif} alt=""/>)}  
+              </section>
+              <div className="header">
+          <Footer/>
+        </div>     
+            
+           </div>
+           )   
+           }

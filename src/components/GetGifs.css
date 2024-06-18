@@ -1,0 +1,30 @@
+.GetGifs{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,230px);
+    gap:40px;
+    padding: 40px;
+    justify-content: center;
+}
+
+@media (max-width:560px){
+    .GetGifs{
+    grid-template-columns:100%; 
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+ }
+}
+
+.gifsImage{
+    border-radius: 10px;
+    background-color: rgb(7, 8, 8);
+    width: 230px;
+    height: 345px;
+}
+
+@media(max-width:560px){
+    .gifsImage{
+width: 90%;
+height: auto;
+    }
+ }
