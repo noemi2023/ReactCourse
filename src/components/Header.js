@@ -7,7 +7,7 @@ function Header ()  {
         
         <header className="header">
         <div className="image">
-        <img src={catsM} height={320} width={1020} alt=""/> 
+        <img src={catsM} height={320} width={990} alt=""/> 
         </div>
         </header>
      
