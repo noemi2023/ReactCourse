@@ -10,7 +10,7 @@ return (
 <footer className="footer">
         <div className="container">
         <a href="https://www.tuentrada.com/" target="_blank" rel="noreferrer">    
-        <img src={Cats4} height={130} width={650} alt=""/> 
+        <img src={Cats4} height={130} width={600} alt=""/> 
         </a>
         </div>
         </footer>
